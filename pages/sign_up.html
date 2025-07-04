@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Elkber Awi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="../image/Logo.png" type="image/png" />
+    
+    <link rel="stylesheet" href="../css/sign_up.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <h2>Sign Up</h2>
+
+      <form id="signupForm" action="/submit" method="POST" enctype="multipart/form-data">
+        <!-- Type Selection -->
+        <label for="userType">I am a:</label>
+        <select id="userType" name="userType" required>
+          <option value="">-- Select User Type --</option>
+          <option value="user">User (Caregiver)</option>
+          <option value="stuff">Stuff (Staff Member)</option>
+        </select>
+
+        <!-- Basic Info -->
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <!-- User Fields -->
+        <div id="userFields" class="hidden">
+          <label for="elderName">Elder's Name</label>
+          <input type="text" id="elderName" name="elderName" />
+
+          <label for="elderAge">Elder's Age</label>
+          <input type="number" id="elderAge" name="elderAge" />
+
+          <label for="healthCondition">Health Condition</label>
+          <textarea id="healthCondition" name="healthCondition" rows="3"></textarea>
+
+          <label for="relationship">Your Relationship to Elder</label>
+          <select id="relationship" name="relationship">
+            <option value="son">Son</option>
+            <option value="daughter">Daughter</option>
+            <option value="relative">Relative</option>
+            <option value="neighbor">Neighbor</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="mainResponsible">Are you the main caregiver?</label>
+          <select id="mainResponsible" name="mainResponsible">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <label for="notifications">Preferred Notifications</label>
+          <select id="notifications" name="notifications">
+            <option value="mobile">Mobile Notifications</option>
+            <option value="email">Email Reports</option>
+            <option value="both">Both</option>
+          </select>
+
+          <label for="reminders">Need Medication Reminders?</label>
+          <select id="reminders" name="reminders">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <!-- Shared Fields -->
+      <div id="staffFields" class="hidden">
+  <label for="jobTitle">Job Title / Occupation</label>
+  <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g. Nurse, Volunteer" />
+
+  <label for="cvUpload">Upload CV</label>
+  <input type="file" id="cvUpload" name="cvUpload" accept=".pdf,.doc,.docx" />
+
+  <label for="experienceCertificate">Upload Experience Certificate</label>
+  <input type="file" id="experienceCertificate" name="experienceCertificate" accept=".pdf,.jpg,.jpeg,.png" />
+</div>
+<div class="bt">
+
+  <button type="submit">Create Account</button>
+</div>
+
+        <div class="login-link">
+          Already have an account? <a href="login.html">Login here</a>
+        </div>
+      </form>
+    </div>
+
+  <script>
+  const userTypeSelect = document.getElementById("userType");
+  const userFields = document.getElementById("userFields");
+  const staffFields = document.getElementById("staffFields");
+
+  function toggleFields() {
+    const type = userTypeSelect.value;
+    
+    if (type === "user") {
+      userFields.style.display = "block";
+      staffFields.style.display = "none";
+    } else if (type === "stuff") {
+      userFields.style.display = "none";
+      staffFields.style.display = "block";
+    } else {
+      // لو لسه مختارش
+      userFields.style.display = "none";
+      staffFields.style.display = "none";
+    }
+  }
+
+  toggleFields(); // أول ما الصفحة تفتح
+  userTypeSelect.addEventListener("change", toggleFields);
+ 
+  const form = document.getElementById("signupForm");
+
+ 
+  // عند إرسال الفورم
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // ✅ Show alert message
+    alert("✅ Account created successfully!");
+    // ⏳ بعد 3 ثواني ينقله على login
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 2000);
+  });
+
+
+
+</script>
+
+
+  </body>
+</html>

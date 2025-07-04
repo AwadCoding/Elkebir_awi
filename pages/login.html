@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="icon" href="../image/Logo.png" type="image/png" />
+  
+    <title>Login | Elkber Awi</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login to Your Account</h2>
+      <form action="/login" method="POST">
+         <label for="userType">User Type</label>
+        <select id="userType" name="userType" required>
+          <option value="">-- Select User Type --</option>
+          <option value="user">User</option>
+          <option value="stuff">Stuff</option>
+        </select>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+       
+        <div class="bt">
+
+            <button type="submit">Login</button>
+        </div>
+      </form>
+
+      <div class="bottom-links">
+        <a href="../pages/forget_pass.html">Forgot password?</a> |
+        <a href="sign_up.html">Create new account</a>
+      </div>
+    </div>
+    <script>
+  
+  const userTypeSelect = document.getElementById("userType");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+  const form = document.querySelector("form"); // لازم تعرّف الفورم هنا
+
+  // تغيير الـ placeholder بناءً على النوع
+  userTypeSelect.addEventListener("change", function () {
+    if (userTypeSelect.value === "stuff") {
+      emailInput.placeholder = "Stuff Email";
+      passwordInput.placeholder = "Stuff Password";
+    } else if (userTypeSelect.value === "user") {
+      emailInput.placeholder = "User Email";
+      passwordInput.placeholder = "User Password";
+    }
+  });
+
+  // تغيير الصفحة بناءً على النوع
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // منع الإرسال التلقائي
+
+    const selectedUserType = userTypeSelect.value;
+    if (selectedUserType === "stuff") {
+      window.location.href = "stuff.html";
+    } else if (selectedUserType === "user") {
+      window.location.href = "user.html";
+    } else {
+      alert("Please select a user type.");
+    }
+  });
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User | Elkber Awi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/userh.css" />
+    <script src="../js/user.js" defer></script>
+    <script src="../js/index.js" defer></script>
+    <link rel="icon" href="image/Logo.png" type="image/png" />
+
+  </head>
+  <body>
+    <header id="main-header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#"
+            ><img src="../image/Logo.png" alt="logo" /><span
+              >Elkber awi</span
+            ></a
+          >
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/serves.html">Services</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="sign_up.html">Join Us</a></li>
+         
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <!-- Profile Header -->
+      <div class="profile-header">
+        <div class="avatar" id="avatar-container">
+          <img id="profile-pic" src="../image/user.jpg" alt="Profile Picture" />
+          <input
+            type="file"
+            id="file-input"
+            accept="image/*"
+            style="display: none"
+          />
+        </div>
+
+        <div class="user-info">
+          <h2 id="name-display">User</h2>
+          <input
+            type="text"
+            id="name-input"
+            value="User"
+            style="display: none"
+          />
+
+          <p id="email-display">user@example.com</p>
+          <input
+            type="email"
+            id="email-input"
+            value="user@example.com"
+            style="display: none"
+          />
+
+          <p id="location-display">Location: Middle East</p>
+          <input
+            type="text"
+            id="location-input"
+            value="Middle East"
+            style="display: none"
+          />
+
+          <p id="member-since-display">Member since: 2025</p>
+        </div>
+
+        <div class="profile-actions">
+          <button class="btn gray" id="edit-btn">Edit</button>
+          <button class="btn dark" id="save-btn" style="display: none">
+            Save
+          </button>
+          <button class="btn gray" id="exit-btn" style="display: none">
+            Exit
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Services Grid -->
+      <div class="services-grid">
+        <div class="service-card" id="heart-rate">
+          <h3>Heart Rate</h3>
+          <div class="status-circle" id="heart-status"></div>
+          <p id="heart-status-text"></p>
+          <p id="heart-value"></p>
+        </div>
+
+        <div class="service-card" id="blood-pressure">
+          <h3>Blood Pressure</h3>
+          <div class="status-circle" id="bp-status"></div>
+          <p id="bp-status-text"></p>
+          <p id="bp-value"></p>
+        </div>
+
+        <div class="service-card" id="spo2">
+          <h3>Blood Oxygen (SpO₂)</h3>
+          <div class="status-circle" id="spo2-status"></div>
+          <p id="spo2-status-text"></p>
+          <p id="spo2-value"></p>
+        </div>
+
+        <div class="service-card" id="respiratory-rate">
+          <h3>Respiratory Rate</h3>
+          <div class="status-circle" id="rr-status"></div>
+          <p id="rr-status-text"></p>
+          <p id="rr-value"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Camera Section -->
+<div class="camera-section">
+  <h3>Home Camera Monitor</h3>
+  <button id="open-camera" class="camera-btn">
+    <i class="fas fa-video"></i> Open Camera
+  </button>
+  <div class="camera-box hidden">
+    <video id="camera-stream" autoplay playsinline></video>
+    <button id="close-camera" class="close-camera-btn">Close</button>
+  </div>
+</div>
+
+    <button
+      class="logout-global"
+      onclick="window.location.href='../index.html'"
+    >
+      Logout
+    </button>
+    <!-- Footer -->
+     <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Elkber Awi. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1FtNPQNyS4/?mibextid=wwXIfr" target="_blank" class="social-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/el_kebir_awii?igsh=MWl3ZWd4ZW1nZTNmZw==" target="_blank" class="social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/el-kebir-awi" target="_blank" class="social-icon"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

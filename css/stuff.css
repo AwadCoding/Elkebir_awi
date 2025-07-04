@@ -25,7 +25,9 @@ body {
 }
 
 
-
+#main-header.scrolled .menu-toggle{
+  color: var(--light);
+}
 
 
 /* ========== Header (Navbar) ========== */

@@ -25,6 +25,9 @@ body {
     color: var(--dark);
     overflow-x: hidden;
 }
+#main-header.scrolled .menu-toggle{
+  color: var(--light);
+}
 
 
 

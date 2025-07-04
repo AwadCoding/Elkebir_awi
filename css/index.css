@@ -20,6 +20,9 @@
       font-family: 'Work Sans', sans-serif;
   }
 
+  #main-header.scrolled .menu-toggle{
+  color: var(--light);
+}
   body {
       font-family: Arial, sans-serif;
       background-color: var(--light);

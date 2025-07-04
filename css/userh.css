@@ -121,7 +121,9 @@ body {
   color: var(--soft-teal);
 
 }
-
+#main-header.scrolled .menu-toggle{
+  color: var(--light);
+}
 #main-header.scrolled {
   background-color: #2d3e50;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);

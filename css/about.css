@@ -25,7 +25,9 @@ body {
   line-height: 1.6;
 }
 
-
+#main-header.scrolled .menu-toggle{
+  color: var(--light);
+}
 
 
 

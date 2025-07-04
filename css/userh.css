@@ -122,7 +122,7 @@ body {
 
 }
 #main-header nav ul a {
-  color: var(--light);
+  color: var(--dark);
 }
 #main-header.scrolled .menu-toggle{
   color: var(--light);

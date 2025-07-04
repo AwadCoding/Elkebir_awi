@@ -141,7 +141,9 @@ body {
     .menu-toggle {
         display: block;
     }
-
+    #main-header nav ul a {
+  color: var(--light);
+}
     .nav-links {
         position: fixed;
         top: 0;
@@ -227,8 +229,8 @@ body {
     margin-bottom: 40px;
 }
 .hero-text {
-      /* background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px); */
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(2.5px);
       border-radius: 20px;
       padding: 2rem;
       max-width: 600px;

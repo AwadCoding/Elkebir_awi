@@ -131,7 +131,9 @@ body {
       .menu-toggle {
           display: block;
       }
-
+      #main-header nav ul a {
+  color: var(--light);
+}
       .nav-links {
           position: fixed;
           top: 0;

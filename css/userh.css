@@ -121,6 +121,9 @@ body {
   color: var(--soft-teal);
 
 }
+#main-header nav ul a {
+  color: var(--light);
+}
 #main-header.scrolled .menu-toggle{
   color: var(--light);
 }
@@ -146,7 +149,12 @@ body {
   .menu-toggle {
     display: block;
   }
-
+  #main-header nav ul a {
+  color: var(--light);
+}
+#main-header nav ul a {
+  color: var(--light);
+}
   .nav-links {
     position: fixed;
     top: 0;
@@ -168,6 +176,9 @@ body {
   .nav-links li {
     margin: 20px 0;
   }
+  #main-header nav ul a {
+  color: var(--light);
+}
 
   .nav-links a {
     color: var(--light);

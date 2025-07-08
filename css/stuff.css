@@ -112,20 +112,7 @@ body {
       color: var(--dark);
       z-index: 1101;
   }
-   #main-header nav ul li:last-child a {
-      background-color: var(--soft-teal);
-      color: var(--light);
-      border-radius: 8px;
-            padding: 5px 13px;
-
-      transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  #main-header nav ul li:last-child a:hover {
-      background-color: var(--charcoal);
-      color: var(--soft-teal);
-      box-shadow: 0 2px 10px var(--soft-teal);
-  }
+ 
 
   @media (max-width: 1024px) {
       .menu-toggle {
@@ -262,9 +249,6 @@ h3 {
 }
 
 
-li:last-child {
-    border-bottom: none;
-}
 
 /* Right boxes styling */
 .right-box {

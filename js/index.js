@@ -15,15 +15,15 @@ window.addEventListener("scroll", function () {
   }
 
   // Reveal features
-  const featureCards = document.querySelectorAll(".feature-card");
-  featureCards.forEach((card) => {
-    const cardRect = card.getBoundingClientRect();
-    if (cardRect.top < window.innerHeight - 50) {
-      card.classList.add("visible");
-    }
-  });
+  // const featureCards = document.querySelectorAll(".feature-card");
+  // featureCards.forEach((card) => {
+  //   const cardRect = card.getBoundingClientRect();
+  //   if (cardRect.top < window.innerHeight - 50) {
+  //     card.classList.add("visible");
+  //   }
+  // });
 
-  // Reveal why-choose
+  // Reveal why-choose بيعمل شكل الكارد وهوا طالع 
   const cards = document.querySelectorAll(".why-choose .feature-card");
   cards.forEach((card) => {
     const rect = card.getBoundingClientRect();
